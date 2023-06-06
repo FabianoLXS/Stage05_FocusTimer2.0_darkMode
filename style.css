@@ -92,15 +92,15 @@ img {
 max-height: 4.8rem;
 }
 
-@media {
+@media  {
 :root {
   font-size: 62.5%;
-  --bg-color: #FFFFFF;
-  --bg-btnOn: #02799D;
-  --bg-btnOff: #E1E1E6;
+  --bg-color: black;
+  --bg-btnOn: #0A3442;
+  --bg-btnOff: #29292E;
   --bg-soundOn: #FFFFFF;
   --ff-type: font-family: 'Roboto', sans-serif;
-  --fc-time: #323238; 
+  --fc-time: #FFFFFF; 
   --bg-pressedBtn: #42D3FF;
 }
 }
