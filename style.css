@@ -19,12 +19,19 @@ body {
   background-color: var(--bg-color);
 }
 
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 6.4rem;
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 19.2rem;
-  height: 90vh;
+  height: 60vh;
 }
 
 main span{
@@ -83,4 +90,17 @@ button {
 
 img {
 max-height: 4.8rem;
+}
+
+@media {
+:root {
+  font-size: 62.5%;
+  --bg-color: #FFFFFF;
+  --bg-btnOn: #02799D;
+  --bg-btnOff: #E1E1E6;
+  --bg-soundOn: #FFFFFF;
+  --ff-type: font-family: 'Roboto', sans-serif;
+  --fc-time: #323238; 
+  --bg-pressedBtn: #42D3FF;
+}
 }
