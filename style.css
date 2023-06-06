@@ -13,6 +13,7 @@
   --ff-type: font-family: 'Roboto', sans-serif;
   --fc-time: #323238; 
   --bg-pressedBtn: #42D3FF;
+  --bg-soundOff: #C4C4CC;
 }
 
 body {
@@ -79,6 +80,11 @@ button {
   fill: var(--bg-soundOn);
 }
 
+.soundOff {
+  background-color: var(--bg-btnOff);
+  fill: var(--bg-soundOff);
+}
+
 .pressedButton {
   fill: var(--bg-pressedBtn);
   transition: all 80ms ease-in;
@@ -102,5 +108,6 @@ max-height: 4.8rem;
   --ff-type: font-family: 'Roboto', sans-serif;
   --fc-time: #FFFFFF; 
   --bg-pressedBtn: #42D3FF;
+  --bg-soundOff: #C4C4CC;
 }
 }
