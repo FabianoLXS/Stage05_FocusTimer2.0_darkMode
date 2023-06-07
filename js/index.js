@@ -81,10 +81,18 @@ function lightMode(){
   
   buttonLightMode.addEventListener("click", function () {
     if (buttonDarkMode.classList.contains("hide")) {
-      lightMode()
-    } else {
       darkMode()
+    } else {
+      lightMode()
     }
+  })
+
+ buttonDarkMode.addEventListener("click", function () {
+    if (buttonDarkMode.classList.contains("hide")) {
+      darkMode()
+    } else {
+      lightMode()
+   }
   })
 
 export const timer = Timer({
