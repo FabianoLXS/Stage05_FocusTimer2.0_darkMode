@@ -3,6 +3,9 @@ import { Timer } from "./timer.js"
 import { Controls } from "./controls.js"
 import { Sound } from "./sound.js"
 
+//darkMode
+const body = document.body
+
 //Timer variables
 const time = document.querySelector(".time")
 const minutesDisplay = document.querySelector(".minutes")
@@ -13,8 +16,8 @@ const buttonPause = document.querySelector(".pause")
 const buttonStop = document.querySelector(".stop")
 const buttonIncrease = document.querySelector(".increase")
 const buttonDecrease = document.querySelector(".decrease")
-const buttonDarkMode = document.querySelector(".darkMode")
-const buttonLightMode = document.querySelector(".lightMode")
+const buttonDarkMode = document.querySelector(".darkModeImg")
+const buttonLightMode = document.querySelector(".lightModeImg")
 
 //Sound variables
 const buttonSoundForest = document.querySelector(".forestButton")
@@ -53,46 +56,25 @@ let timerTimeOut
 
 
 function darkMode() {
-  // pathPlay.classList.add("darkMode")
-  // pathStop.classList.add("darkMode")
-  // pathIncrease.classList.add("darkMode")
-    // pathDecrease.classList.add("darkMode")
-    // pathCoffeeShop.classList.add("darkMode")
-    // pathFire.classList.add("darkMode")
-    // pathForest.classList.add("darkMode")
-    // pathRain.classList.add("darkMode")
-    buttonDarkMode.classList.remove("hide")
-    buttonLightMode.classList.add("hide")
-  }
-  
-function lightMode(){
-    // pathPlay.classList.remove("darkMode")
-    // pathStop.classList.remove("darkMode")
-    // pathIncrease.classList.remove("darkMode")
-    // pathDecrease.classList.remove("darkMode")
-    // pathCoffeeShop.classList.remove("darkMode")
-    // pathFire.classList.remove("darkMode")
-    // pathForest.classList.remove("darkMode")
-    // pathRain.classList.remove("darkMode")
-    buttonDarkMode.classList.add("hide")
-    buttonLightMode.classList.remove("hide")
-  }
-  
+  pathPlay.classList.toggle("darkMode")
+  pathStop.classList.toggle("darkMode")
+  pathIncrease.classList.toggle("darkMode")
+  pathDecrease.classList.toggle("darkMode")
+  pathCoffeeShop.classList.toggle("darkMode")
+  pathFire.classList.toggle("darkMode")
+  pathForest.classList.toggle("darkMode")
+  pathRain.classList.toggle("darkMode")
+  buttonDarkMode.classList.toggle("hide")
+  buttonLightMode.classList.toggle("hide")
+  body.classList.toggle("darkMode")
+}
   
   buttonLightMode.addEventListener("click", function () {
-    if (buttonDarkMode.classList.contains("hide")) {
-      darkMode()
-    } else {
-      lightMode()
-    }
+    darkMode()
   })
 
  buttonDarkMode.addEventListener("click", function () {
-    if (buttonDarkMode.classList.contains("hide")) {
-      darkMode()
-    } else {
-      lightMode()
-   }
+  darkMode()
   })
 
 export const timer = Timer({

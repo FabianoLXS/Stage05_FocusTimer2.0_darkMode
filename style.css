@@ -6,6 +6,9 @@
 
 :root {
   font-size: 62.5%;
+}
+
+body {
   --bg-color: #FFFFFF;
   --bg-btnOn: #02799D;
   --bg-btnOff: #E1E1E6;
@@ -14,25 +17,23 @@
   --fc-time: #323238; 
   --bg-pressedBtn: #42D3FF;
   --bg-soundOff: #C4C4CC;
-}
-
-body {
   background-color: var(--bg-color);
+  transition: all ease;
 }
 
-header{
+/* header{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: 6.4rem;
-}
+} */
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 19.2rem;
-  height: 60vh;
+  height: 90vh;
 }
 
 main span{
@@ -81,8 +82,17 @@ button {
 }
 
 .darkMode {
-  background-color: var(--bg-btnOff);
+  /* background-color: var(--bg-btnOff); */
   fill: var(--bg-soundOff);
+ 
+  --bg-color: black;
+  --bg-btnOn: #0A3442;
+  --bg-btnOff: #29292E;
+  --bg-soundOn: #FFFFFF;
+  --fc-time: #FFFFFF; 
+  --bg-pressedBtn: #42D3FF;
+  --bg-soundOff: #C4C4CC;
+  transition: all ease;
 }
 
 .pressedButton {
@@ -98,20 +108,32 @@ img {
 max-height: 4.8rem;
 }
 
-.lightMode img {
+.lightModeImg img {
   max-height: 3.6rem;
 }
 
-@media dark {
+.darkModeImg img {
+  background-color: none;
+}
+
+.lightDarkMode {
+  display: block;
+  position: absolute;
+  right: 6.4rem;
+  top: 6.4rem;
+}
+
+@media (){
 :root {
   font-size: 62.5%;
   --bg-color: black;
   --bg-btnOn: #0A3442;
   --bg-btnOff: #29292E;
   --bg-soundOn: #FFFFFF;
-  --ff-type: font-family: 'Roboto', sans-serif;
+
   --fc-time: #FFFFFF; 
   --bg-pressedBtn: #42D3FF;
   --bg-soundOff: #C4C4CC;
 }
+
 }
