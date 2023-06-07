@@ -22,7 +22,7 @@ export function Timer({
     } else {
       minutes = newMinutes
       updateTimerDisplay(minutes, 0)
-      // controls.playPauseButton("play")
+      controls.playPauseButton("play")
     }
   }
   
