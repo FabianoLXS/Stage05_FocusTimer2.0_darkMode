@@ -13,6 +13,8 @@ const buttonPause = document.querySelector(".pause")
 const buttonStop = document.querySelector(".stop")
 const buttonIncrease = document.querySelector(".increase")
 const buttonDecrease = document.querySelector(".decrease")
+const buttonDarkMode = document.querySelector(".darkMode")
+const buttonLightMode = document.querySelector(".lightMode")
 
 //Sound variables
 const buttonSoundForest = document.querySelector(".forestButton")
@@ -49,6 +51,42 @@ let seconds
 let soundType
 let timerTimeOut
 
+
+function darkMode() {
+  // pathPlay.classList.add("darkMode")
+  // pathStop.classList.add("darkMode")
+  // pathIncrease.classList.add("darkMode")
+    // pathDecrease.classList.add("darkMode")
+    // pathCoffeeShop.classList.add("darkMode")
+    // pathFire.classList.add("darkMode")
+    // pathForest.classList.add("darkMode")
+    // pathRain.classList.add("darkMode")
+    buttonDarkMode.classList.remove("hide")
+    buttonLightMode.classList.add("hide")
+  }
+  
+function lightMode(){
+    // pathPlay.classList.remove("darkMode")
+    // pathStop.classList.remove("darkMode")
+    // pathIncrease.classList.remove("darkMode")
+    // pathDecrease.classList.remove("darkMode")
+    // pathCoffeeShop.classList.remove("darkMode")
+    // pathFire.classList.remove("darkMode")
+    // pathForest.classList.remove("darkMode")
+    // pathRain.classList.remove("darkMode")
+    buttonDarkMode.classList.add("hide")
+    buttonLightMode.classList.remove("hide")
+  }
+  
+  
+  buttonLightMode.addEventListener("click", function () {
+    if (buttonDarkMode.classList.contains("hide")) {
+      lightMode()
+    } else {
+      darkMode()
+    }
+  })
+
 export const timer = Timer({
   time,
   pathPlay,
@@ -58,6 +96,7 @@ export const timer = Timer({
   timerTimeOut,
   minutes,
   seconds,
+  
 })
 
 const controls = Controls({

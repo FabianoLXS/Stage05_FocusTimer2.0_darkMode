@@ -80,7 +80,7 @@ button {
   fill: var(--bg-soundOn);
 }
 
-.soundOff {
+.darkMode {
   background-color: var(--bg-btnOff);
   fill: var(--bg-soundOff);
 }
@@ -98,7 +98,7 @@ img {
 max-height: 4.8rem;
 }
 
-@media  {
+@media darkMode {
 :root {
   font-size: 62.5%;
   --bg-color: black;

@@ -10,7 +10,6 @@ export function Timer({
   minutes,
   seconds,
   controls,
-  playPauseButton,
 }) {
   
   //função set time
