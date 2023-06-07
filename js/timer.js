@@ -12,14 +12,7 @@ export function Timer({
   controls,
 }) {
   
-  //função set time
-  time.addEventListener("click", function () {
-    if (pathPlay.classList != "pressedButton") {
-      setMinutes()
-    }
-  })
-  
-  //Set minutes function
+    //Set minutes function
   function setMinutes() {
     let newMinutes = Number(prompt("Quantos minutos?"))
     if (!newMinutes) {
@@ -29,9 +22,17 @@ export function Timer({
     } else {
       minutes = newMinutes
       updateTimerDisplay(minutes, 0)
-      controls.playPauseButton("play")
+      // controls.playPauseButton("play")
     }
   }
+  
+  //função set time
+  time.addEventListener("click", function () {
+    if (pathPlay.classList != "pressedButton") {
+      setMinutes()
+    }
+  })
+  
   
   // Update timer display function
   function updateTimerDisplay(minutes, seconds) {
