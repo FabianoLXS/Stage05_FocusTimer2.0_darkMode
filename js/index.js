@@ -35,6 +35,7 @@ const pathPlay = document.querySelector("path.play")
 const pathStop = document.querySelector("path.stop")
 const pathIncrease = document.querySelector("path.increase")
 const pathDecrease = document.querySelector("path.decrease")
+let forestVolume = document.getElementById("forestSlider")
   
 
 //Ambience Sound variables
@@ -76,6 +77,14 @@ function darkMode() {
  buttonDarkMode.addEventListener("click", function () {
   darkMode()
   })
+
+
+forestVolume.addEventListener("change", function (e) {
+  forestVolume = e.currentTarget.value / 100
+})
+
+
+
 
 export const timer = Timer({
   time,
