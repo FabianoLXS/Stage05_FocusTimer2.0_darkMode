@@ -18,8 +18,8 @@ body {
   --fc-time: #323238; 
   --bg-pressedBtn: #42D3FF;
   --bg-soundOff: #C4C4CC;
-  --bg-sliderLight: #323238;
-  --bg-sliderDark: #FFFFFF;
+  --bg-slider: #323238;
+  
   background-color: var(--bg-color);
   transition: all ease;
 }
@@ -84,6 +84,7 @@ button {
 .soundOn {
   background-color: var(--bg-btnOn);
   fill: var(--bg-soundOn);
+  --bg-slider: #FFFFFF;
 }
 
 .darkMode {
@@ -97,6 +98,7 @@ button {
   --fc-time: #FFFFFF; 
   --bg-pressedBtn: #42D3FF;
   --bg-soundOff: #C4C4CC;
+  --bg-slider: #FFFFFF;
   transition: all ease;
 }
 
@@ -148,19 +150,20 @@ max-height: 4.8rem;
   appearance: none;
   width: 13.8 rem; /* Full-width */
   height: 5px; /* Specified height */
-  background: #FFF; /* Grey background */
+  background: var(--bg-slider); /* Grey background */
   outline: none; /* Remove outline */
   
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
-  border-radius: 30px;  
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));  
 }
 
 .slider::-webkit-slider-thumb {
   appearance: none;
   width: 15px; /* Set a specific slider handle width */
   height: 15px; /* Slider handle height */
-  background: #FFF; /* Green background */
+  background: var(--bg-slider);/* Green background */
   cursor: pointer; /* Cursor on hover */
   border-radius: 50%;
   outline: none;
