@@ -36,6 +36,9 @@ const pathStop = document.querySelector("path.stop")
 const pathIncrease = document.querySelector("path.increase")
 const pathDecrease = document.querySelector("path.decrease")
 let forestVolume = document.getElementById("forestSlider")
+let rainVolume = document.getElementById("rainSlider")
+let coffeeShopVolume = document.getElementById("coffeeShopSlider")
+let firePlaceVolume = document.getElementById("firePlaceSlider")
   
 
 //Ambience Sound variables
@@ -56,16 +59,6 @@ let soundType
 let timerTimeOut
 
 
-
-
-
-forestVolume.addEventListener("input", (e) => {
-  forestSound.forestVolume = e.currentTarget.value / 100
-})
-
-
-
-
 export const timer = Timer({
   time,
   pathPlay,
@@ -75,7 +68,6 @@ export const timer = Timer({
   timerTimeOut,
   minutes,
   seconds,
-  
 })
 
 const controls = Controls({
@@ -118,5 +110,13 @@ const sound = Sound({
   button,
   imagePath,
   soundType,
+  forestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  firePlaceVolume,
 })
 
+
+
+
+  

@@ -15,7 +15,12 @@ export function Sound({
   button,
   imagePath,
   soundType,
+  forestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  firePlaceVolume,
 }) {
+  
   // Sound button listener
   buttonSoundForest.addEventListener("click", function () {
     soundType = "forest"
@@ -86,6 +91,20 @@ export function Sound({
         break
     }
   }
+
+  forestVolume.addEventListener("input", (e) => {
+    forestSound.volume = e.currentTarget.value / 100
+  })
+  rainVolume.addEventListener("input", (e) => {
+    rainSound.volume = e.currentTarget.value / 100
+  })
+  coffeeShopVolume.addEventListener("input", (e) => {
+    coffeeShopSound.volume = e.currentTarget.value / 100
+  })
+  firePlaceVolume.addEventListener("input", (e) => {
+    firePlaceSound.volume = e.currentTarget.value / 100
+  })
+
   return {
     soundButton,
     toggleAmbienceSound,
