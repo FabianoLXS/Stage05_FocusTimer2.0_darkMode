@@ -56,31 +56,11 @@ let soundType
 let timerTimeOut
 
 
-function darkMode() {
-  pathPlay.classList.toggle("darkMode")
-  pathStop.classList.toggle("darkMode")
-  pathIncrease.classList.toggle("darkMode")
-  pathDecrease.classList.toggle("darkMode")
-  pathCoffeeShop.classList.toggle("darkMode")
-  pathFire.classList.toggle("darkMode")
-  pathForest.classList.toggle("darkMode")
-  pathRain.classList.toggle("darkMode")
-  buttonDarkMode.classList.toggle("hide")
-  buttonLightMode.classList.toggle("hide")
-  body.classList.toggle("darkMode")
-}
-  
-  buttonLightMode.addEventListener("click", function () {
-    darkMode()
-  })
-
- buttonDarkMode.addEventListener("click", function () {
-  darkMode()
-  })
 
 
-forestVolume.addEventListener("change", function (e) {
-  forestVolume = e.currentTarget.value / 100
+
+forestVolume.addEventListener("input", (e) => {
+  forestSound.forestVolume = e.currentTarget.value / 100
 })
 
 
@@ -112,6 +92,13 @@ const controls = Controls({
   timer,
   minutes,
   minutesDisplay,
+  body,
+  buttonDarkMode,
+  buttonLightMode,
+  pathRain,
+  pathForest,
+  pathFire,
+  pathCoffeeShop,
 })        
 
 const sound = Sound({
