@@ -20,7 +20,7 @@ export function Sound({
   coffeeShopVolume,
   firePlaceVolume,
 }) {
-  
+
   // Sound button listener
   buttonSoundForest.addEventListener("click", function () {
     soundType = "forest"
