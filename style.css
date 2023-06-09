@@ -136,7 +136,7 @@ max-height: 4.8rem;
 
 .slider {
   appearance: none;
-  width: 13.8 rem; /* Full-width */
+  width: 10rem; /* Full-width */
   height: 5px; /* Specified height */
   background: var(--bg-slider); /* Grey background */
   outline: none; /* Remove outline */
