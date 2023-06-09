@@ -1,4 +1,3 @@
-
 export function Timer({
   time,
   pathPlay,

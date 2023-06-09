@@ -1,4 +1,3 @@
-
 import { Timer } from "./timer.js"
 import { Controls } from "./controls.js"
 import { Sound } from "./sound.js"
