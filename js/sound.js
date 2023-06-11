@@ -22,25 +22,25 @@ export function Sound({
 }) {
 
   // Sound button listener
-  buttonSoundForest.addEventListener("click", function () {
+  buttonSoundForest.addEventListener("mousedown", function () {
     soundType = "forest"
     soundButton(soundType)
     toggleAmbienceSound(button, imagePath, ambienceSound)
   })
 
-  buttonSoundRain.addEventListener("click", function () {
+  buttonSoundRain.addEventListener("mousedown", function () {
     soundType = "rain"
     soundButton(soundType)
     toggleAmbienceSound(button, imagePath, ambienceSound)
   })
 
-  buttonSoundCoffeeShop.addEventListener("click", function () {
+  buttonSoundCoffeeShop.addEventListener("mousedown", function () {
     soundType = "coffeeShop"
     soundButton(soundType)
     toggleAmbienceSound(button, imagePath, ambienceSound)
   })
 
-  buttonSoundFirePlace.addEventListener("click", function () {
+  buttonSoundFirePlace.addEventListener("mousedown", function () {
     soundType = "firePlace"
     soundButton(soundType)
     toggleAmbienceSound(button, imagePath, ambienceSound)
